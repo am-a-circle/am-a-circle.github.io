@@ -22,7 +22,7 @@ Table of Contents
 
 |No.|Machine Name|Reference|Files/Binaries| Description |
 |-------|--------------|--------------|----------------|----------------|
-|1.|[PYEXP: 1](https://www.vulnhub.com/entry/pyexp-1,534/)|[Reference](../_posts/2021-04-18-PYEXP:1.md)| Python script| exec function |
+|1.|[PYEXP: 1](https://www.vulnhub.com/entry/pyexp-1,534/)|[Reference](/../_posts/2021-04-18-PYEXP:1.md)| Python script| exec function |
 
 
 <a name="suid"></a>
@@ -30,8 +30,8 @@ Table of Contents
 
 |No.| Machine Name                 |SUID Bit| Reference | Method |
 |-------|------------------------------|-------|-------|--------------------------------------------------------|
-|1|[ShellDredd #1 Hannah](https://www.vulnhub.com/entry/onsystem-shelldredd-1-hannah,545/)| cpulimit|[Reference](../_posts/2021-04-15-ONSYSTEM-HANNAH.md)  | cpulimit -l 50 -f cp /bin/bash /tmp/bash <br> cpulimit -l 50 -f chmod +s /tmp/bash <br>  /tmp/bash -p|
-|1|[hackmyvm : connection](https://hackmyvm.eu/machines/machine.php?vm=Connection)| gdb |[Reference](../_posts/2021-12-23-connection.md)  | gdb -nx -ex 'python import os; os.execl("/bin/sh", "sh", "-p")' -ex quit |
+|1|[ShellDredd #1 Hannah](https://www.vulnhub.com/entry/onsystem-shelldredd-1-hannah,545/)| cpulimit|[Reference](/../_posts/2021-04-15-ONSYSTEM-HANNAH.md)  | cpulimit -l 50 -f cp /bin/bash /tmp/bash <br> cpulimit -l 50 -f chmod +s /tmp/bash <br>  /tmp/bash -p|
+|1|[hackmyvm : connection](https://hackmyvm.eu/machines/machine.php?vm=Connection)| gdb |[Reference](/../_posts/2021-12-23-connection.md)  | gdb -nx -ex 'python import os; os.execl("/bin/sh", "sh", "-p")' -ex quit |
 
 
 
@@ -47,19 +47,19 @@ Table of Contents
 
 | No | Machine Name|
 |----|-----------|
-|1.	 | [PHINEAS:1](../_posts/2021-05-01-PHINEAS_1.md)|
+|1.	 | [PHINEAS:1](/../_posts/2021-05-01-PHINEAS_1.md)|
 
 <a name="path"></a>
 ##  Path Variable [⤴](#table-of-contents)
 
 |No.| Machine Name   | path  |
 |-------|-----------------|--------|
-|1.| [Hacksudo:search](../_posts/2021-05-16-Hacksudo_Search.md )|install    |
+|1.| [Hacksudo:search](/../_posts/2021-05-16-Hacksudo_Search.md )|install    |
 
 <a name="docker"></a>
 ##  Docker Escape [⤴](#table-of-contents)
 
 | No | Machine Name|
 |----|-----------|
-|1.	 | [pwned](../_posts/2021-12-23-pwned.md)|
+|1.	 | [pwned](/../_posts/2021-12-23-pwned.md)|
 
