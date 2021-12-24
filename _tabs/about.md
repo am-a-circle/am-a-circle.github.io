@@ -40,7 +40,7 @@ Table of Contents
 
 | No | Machine Name|
 |----|-----------|
-|1.	 | [PYLINGTON1](../_posts/2021-04-25-PYLINGTON_1.md)|
+|1.	 | [PYLINGTON1](/../_posts/2021-04-25-PYLINGTON_1.md)|
 
 <a name="pickle"></a>
 ##  Python Pickle [⤴](#table-of-contents)
