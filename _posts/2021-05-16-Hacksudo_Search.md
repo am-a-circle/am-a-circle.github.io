@@ -1,7 +1,7 @@
 ---
 title:  "Hacksudo: search"
 author: am-a-circle
-date: 2021-04-15 12:00:00 
+date: 2021-05-16 12:00:00 
 categories: [Vulnhub]
 tags: [Path Variable,easy]
 math: false
