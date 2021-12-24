@@ -1,8 +1,6 @@
 ---
 title: OnSystem ShellDredd #1 Hannah
-author:
-  name: am-a-circle
-  link: https://am-a-circle.github.io
+author: am-a-circle
 date: 2021-04-15 12:00:00 
 categories: [OSCP PG Play]
 tags: [SUID,easy]
