@@ -2,8 +2,8 @@
 title: OnSystem ShellDredd #1 Hannah
 author: am-a-circle
 date: 2021-04-15 12:00:00 +0800
-categories: [OSCP PG Play]
-tags: [SUID,easy]
+categories: [Vulnhub,easy]
+tags: [SUID]
 math: false
 mermaid: false
 ---
