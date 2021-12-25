@@ -70,14 +70,3 @@ Table of Contents
 | No | Machine Name|
 |----|-----------|
 |1.	 | [pwned](/../_posts/2021-12-23-pwned.md)|
-
-## Overview
-
-Another fun box !
-
-|Box Difficulty| Link|
-|--|--|
-| Easy | [hackmyvm Link](https://hackmyvm.eu/machines/machine.php?vm=suidy) |
-
-
-
