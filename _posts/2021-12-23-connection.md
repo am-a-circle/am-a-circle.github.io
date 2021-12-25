@@ -2,7 +2,7 @@
 title: "hackmyvm: connection"
 author: am-a-circle
 date: 2021-12-23 11:59:00 
-categories: [hackmyvm,easy]
+categories: [hackmyvm,easyy]
 tags: [SUID]
 math: false
 mermaid: false
