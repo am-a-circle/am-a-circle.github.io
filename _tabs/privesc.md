@@ -16,6 +16,7 @@ Table of Contents
 * [Python Pickle](#pickle)
 * [Path Variable](#path)
 * [Docker Escape](#docker)
+* [Writable files or script](#wfos)
 
 <a name="sudo"></a>
 ##  Abusing Sudo Rights [⤴](#table-of-contents)
@@ -42,6 +43,13 @@ Table of Contents
 |----|-----------|
 |1.	 | [PYLINGTON1](/../_posts/2021-04-25-PYLINGTON_1.md)|
 
+<a name="wfos"></a>
+##  Writable file or script [⤴](#table-of-contents)
+
+| No | Machine Name|
+|----|-----------|
+|1.	 | [suidy](/../_posts/2021-12-25-suidy.md)|
+
 <a name="pickle"></a>
 ##  Python Pickle [⤴](#table-of-contents)
 
@@ -62,4 +70,14 @@ Table of Contents
 | No | Machine Name|
 |----|-----------|
 |1.	 | [pwned](/../_posts/2021-12-23-pwned.md)|
+
+## Overview
+
+Another fun box !
+
+|Box Difficulty| Link|
+|--|--|
+| Easy | [hackmyvm Link](https://hackmyvm.eu/machines/machine.php?vm=suidy) |
+
+
 
