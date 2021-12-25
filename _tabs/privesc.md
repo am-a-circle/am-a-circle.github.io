@@ -24,6 +24,7 @@ Table of Contents
 |No.|Machine Name|Reference|Files/Binaries| Description |
 |-------|--------------|--------------|----------------|----------------|
 |1.|[PYEXP: 1](https://www.vulnhub.com/entry/pyexp-1,534/)|[Reference](https://am-a-circle.github.io/posts/PYEXP_1/)| Python script| exec function |
+|2.|[BaseME](https://hackmyvm.eu/machines/machine.php?vm=BaseME)|[Reference](https://am-a-circle.github.io/posts/BaseME/)| base64| base64 to read id_rsa from /root/.ssh/id_rsa |
 
 
 <a name="suid"></a>
