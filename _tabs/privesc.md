@@ -22,7 +22,7 @@ Table of Contents
 
 |No.|Machine Name|Reference|Files/Binaries| Description |
 |-------|--------------|--------------|----------------|----------------|
-|1.|[PYEXP: 1](https://www.vulnhub.com/entry/pyexp-1,534/)|[Reference](/../_posts/2021-04-18-PYEXP:1.md)| Python script| exec function |
+|1.|[PYEXP: 1](https://www.vulnhub.com/entry/pyexp-1,534/)|[Reference](/../_posts/2021-04-18-PYEXP_1.md)| Python script| exec function |
 
 
 <a name="suid"></a>
