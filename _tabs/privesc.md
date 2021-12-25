@@ -1,4 +1,3 @@
-
 ---
 title: PrivEsc
 icon: fas fa-info-circle
