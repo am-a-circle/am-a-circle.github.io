@@ -17,7 +17,7 @@ As always, I don't like to overwhelm myself but putting things here atleast give
 |--|--|--|
 | 1|[Red Team Ops](https://www.zeropointsecurity.co.uk/red-team-ops/overview)  | Red team|
 |2 | [awae/oswe](https://www.offensive-security.com/awae-oswe/) | Web Exploit |
-|3|[osep](https://www.offensive-security.com/pen300-osep/)|Newer course, Harder version of OSCP|
+|3|[osep](https://www.offensive-security.com/pen300-osep/)|Newer course, Harder version of OSCP,For readteaming|
 
 # Self-learning
 | |Course  | Comments|
