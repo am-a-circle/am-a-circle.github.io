@@ -61,9 +61,10 @@ Table of Contents
 <a name="path"></a>
 ##  Path Variable [⤴](#table-of-contents)
 
-|No.| Machine Name   | path  |
+|No.| Machine Name   | comments  |
 |-------|-----------------|--------|
-|1.| [Hacksudo:search](https://am-a-circle.github.io/posts/Hacksudo_Search/)|install    |
+|1.| [Hacksudo:search](https://am-a-circle.github.io/posts/Hacksudo_Search/)|install: missing file operand    |
+|2.| [hommie](https://am-a-circle.github.io/posts/Hommie/)|cat: not absolute file path   |
 
 <a name="docker"></a>
 ##  Docker Escape [⤴](#table-of-contents)
