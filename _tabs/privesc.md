@@ -78,7 +78,8 @@ Table of Contents
 |1.	 | [pwned](https://am-a-circle.github.io/posts/pwned/)|
 
 <a name="ev"></a>
+
 ##  Enviroment variable [⤴](#table-of-contents)
-| No | Machine Name|
-|----|-----------|
+|No.| Machine Name   | comments  |
+|-------|-----------------|--------|
 |1.| [icarus](https://am-a-circle.github.io/posts/icarus/)| LD_PRELOAD |
