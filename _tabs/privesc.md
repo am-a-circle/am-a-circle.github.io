@@ -83,4 +83,3 @@ Table of Contents
 | No | Machine Name|
 |----|-----------|
 |1.| [icarus](https://tamanduaflag.github.io/posts/hack-my-vm-icarus/)| LD_PRELOAD |
-    |
