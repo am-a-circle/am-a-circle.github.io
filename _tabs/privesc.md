@@ -79,7 +79,6 @@ Table of Contents
 
 <a name="ev"></a>
 ##  Enviroment variable [⤴](#table-of-contents)
-
 | No | Machine Name|
 |----|-----------|
-|1.| [icarus](https://tamanduaflag.github.io/posts/hack-my-vm-icarus/)| LD_PRELOAD |
+|1.| [icarus](https://am-a-circle.github.io/posts/icarus/)| LD_PRELOAD |
