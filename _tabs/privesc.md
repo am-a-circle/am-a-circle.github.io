@@ -28,8 +28,8 @@ Table of Contents
 |3.|[five](https://hackmyvm.eu/machines/machine.php?vm=five)|[Reference](https://am-a-circle.github.io/posts/five/)| man | man command using Pager of less function. |
 |4.|[forbidden](https://hackmyvm.eu/machines/machine.php?vm=Forbidden)| [EXTERNAL Reference](https://d4t4s3c.medium.com/hackmyvm-forbidden-4266900e6c94) | setarch |  sudo setarch x86_64 /bin/sh |
 |5.|[Vulny](https://hackmyvm.eu/machines/machine.php?vm=Vulny)| [EXTERNAL Reference](https://kerszl.github.io/hacking/walkthrough/vulny/) | flock |   sudo flock -u / /bin/sh |
-
-
+|6.|[troya](https://hackmyvm.eu/machines/machine.php?vm=troya)|[Reference](https://am-a-circle.github.io/posts/troya/)| insmod | [Insert kernel as root for reverse shell](https://book.hacktricks.xyz/linux-unix/privilege-escalation/linux-capabilities#example-2-with-binary)  |
+ 
 <a name="suid"></a>
 ##  SUID Bit [⤴](#table-of-contents)
 
