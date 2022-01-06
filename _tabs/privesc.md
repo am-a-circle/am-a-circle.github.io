@@ -17,6 +17,7 @@ Table of Contents
 * [Path Variable](#path)
 * [Docker Escape](#docker)
 * [Writable files or script](#wfos)
+* [Environment Variable](#ev)
 
 <a name="sudo"></a>
 ##  Abusing Sudo Rights [⤴](#table-of-contents)
@@ -75,3 +76,11 @@ Table of Contents
 | No | Machine Name|
 |----|-----------|
 |1.	 | [pwned](https://am-a-circle.github.io/posts/pwned/)|
+
+<a name="ev"></a>
+##  Enviroment variable [⤴](#table-of-contents)
+
+| No | Machine Name|
+|----|-----------|
+|1.| [icarus](https://tamanduaflag.github.io/posts/hack-my-vm-icarus/)| LD_PRELOAD |
+    |
