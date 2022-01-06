@@ -51,13 +51,24 @@ In order for the private key to be accepted by SSH, it needs to be only readable
 Using the following command to change the file permissions against the newly created SSH private key:
 
 ```
-chmod 600 key_name
+chmod 600 id_rsa
 ```
 
 The following command can then be used to login as the “Victim” user:
 
 ```
-ssh -i key_name user_name@X.X.X.X
+ssh -i id_rsa user_name@X.X.X.X
+```
+
+#### Get username of private keys
+
+If you have private key but not sure of the username. The below will  read a private OpenSSH format file and print an OpenSSH public key to stdout.
+
+```bash
+┌──(root💀kali)-[/opt/hackmyv/icarus]
+└─# ssh-keygen -y -f id_rsa
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDnFqDEuI3k5uE+M1yzYjZyRxisSspq6c7CbjSRMGcnq+tt1Fge15Jp81YLrEUXPA7vv4rN7bb14rh11lzCZTQh03TZjydivGGXyU5z57lPQCPP61GYsajElU+xJPMoERGVakq4mgY78IQUs6/o8/qzv1hjNkWl1SNpzNj3qOAgJ+3M1lL5WQFe4uMqvv2HhPDPsErhXoURBjSHBPw0V82sXfHdU97RSy12JQkWXhBX+oA+UdWE93RhQQ+v/3mavKO4aLXHA/vFUWtjKMt896mpgeJLktnEV7AtaGFKME4jR3N/9PCI1GdUZNmEHcZ6aAQhBEBqbbqORlncHGStRVyR icarus@icarus
 ```
 
 ### **Writable Public Keys**
