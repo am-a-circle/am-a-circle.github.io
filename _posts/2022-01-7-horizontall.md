@@ -1,7 +1,7 @@
 ---
 title: "horizontall"
 author: am-a-circle
-date: 2022-01-06 10:30:00 +0800
+date: 2022-01-07 11:30:00 +0800
 categories: [HTB,easyyy]
 tags: [CVE]
 math: false
