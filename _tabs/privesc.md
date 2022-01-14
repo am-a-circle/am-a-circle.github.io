@@ -25,6 +25,9 @@ Table of Contents WINDOWS
 
 * [Service](#Service)
 
+Linux
+==================================
+
 <a name="sudo"></a>
 ##  Abusing Sudo Rights [⤴](#table-of-contents)
 
@@ -93,18 +96,8 @@ Table of Contents WINDOWS
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-WINDOWS ONLY :
+Windows
+==================================
 
 <a name="Service"></a>
 ##  Service [⤴](#table-of-contents)
