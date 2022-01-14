@@ -7,8 +7,8 @@ order: 4
 The below is a modification from [here](https://github.com/Ignitetechnologies/Privilege-Escalation) !
 
 
-Table of Contents
-=================
+Table of Contents LINUX
+==================================
 
 * [Abusing Sudo Rights](#sudo)
 * [SUID Bit](#suid)
@@ -18,6 +18,12 @@ Table of Contents
 * [Docker Escape](#docker)
 * [Writable files or script](#wfos)
 * [Environment Variable](#ev)
+
+
+Table of Contents WINDOWS
+==================================
+
+* [Service](#Service)
 
 <a name="sudo"></a>
 ##  Abusing Sudo Rights [⤴](#table-of-contents)
@@ -83,3 +89,26 @@ Table of Contents
 |No.| Machine Name   | comments  |
 |-------|-----------------|--------|
 |1.| [icarus](https://am-a-circle.github.io/posts/icarus/)| LD_PRELOAD |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WINDOWS ONLY :
+
+<a name="Service"></a>
+##  Service [⤴](#table-of-contents)
+|No.| Machine Name   | service exploit  |
+|-------|-----------------|--------|
+|1.| driver | [spoolsv](https://github.com/calebstewart/CVE-2021-1675) |
+
