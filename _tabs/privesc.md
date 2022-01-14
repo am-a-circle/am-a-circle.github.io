@@ -25,9 +25,6 @@ Table of Contents WINDOWS
 
 * [Service](#Service)
 
-Linux
-==================================
-
 <a name="sudo"></a>
 ##  Abusing Sudo Rights [⤴](#table-of-contents)
 
@@ -93,11 +90,6 @@ Linux
 |-------|-----------------|--------|
 |1.| [icarus](https://am-a-circle.github.io/posts/icarus/)| LD_PRELOAD |
 
-
-
-
-Windows
-==================================
 
 <a name="Service"></a>
 ##  Service [⤴](#table-of-contents)
