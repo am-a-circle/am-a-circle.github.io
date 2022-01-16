@@ -1,3 +1,4 @@
+
 ---
 title: PrivEsc
 icon: fas fa-info-circle
@@ -8,7 +9,7 @@ The below is a modification from [here](https://github.com/Ignitetechnologies/Pr
 
 <a name="table-of-contents"></a>
 Table of Contents LINUX
-==================================
+==========================
 
 * [Abusing Sudo Rights](#sudo)
 * [SUID Bit](#suid)
@@ -21,7 +22,7 @@ Table of Contents LINUX
 
 
 Table of Contents WINDOWS
-==================================
+==========================
 
 * [Service](#Service)
 
@@ -86,14 +87,17 @@ Table of Contents WINDOWS
 <a name="ev"></a>
 
 ##  Enviroment variable [⤴](#table-of-contents)
+
 |No.| Machine Name   | comments  |
 |-------|-----------------|--------|
-|1.| [icarus](https://am-a-circle.github.io/posts/icarus/)| LD_PRELOAD |
+|1. | [icarus](https://am-a-circle.github.io/posts/icarus/)| LD_PRELOAD |
 
 
 <a name="Service"></a>
+
 ##  Service [⤴](#table-of-contents)
+
 |No.| Machine Name   | service exploit  |
 |-------|-----------------|--------|
-|1.| driver | [spoolsv](https://github.com/calebstewart/CVE-2021-1675) |
+|1. | driver | [spoolsv](https://github.com/calebstewart/CVE-2021-1675) |
 
