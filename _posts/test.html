@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Detective: Email Mystery</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;700&display=swap');
+        body {
+            font-family: 'Quicksand', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #e6f3ff;
+            color: #333;
+        }
+        h1, h2 {
+            font-family: 'Fredoka One', cursive;
+            color: #0066cc;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .scenario, .email {
+            border: 3px solid #66c2ff;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .question {
+            margin-bottom: 15px;
+            background-color: #ffffcc;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        #feedback, #result {
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+        }
+        .email {
+            font-family: 'Courier New', monospace;
+            background-color: #f8f9fa;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        #startButton, #nextButton {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="pulse">🕵️‍♂️ Cyber Detective: Email Mystery 🕵️‍♀️</h1>
+    <div id="intro">
+        <div class="scenario">
+            <h2>Your Mission:</h2>
+            <p>Welcome, junior cyber detective! 🚀 You're now a SOC analyst at Fuhua Primary School. A suspicious email has landed in our inbox, and we need your expert eyes to check it out. Your mission, should you choose to accept it, is to decide if this email is safe or a sneaky scam. Remember, the safety of all the students depends on you! Are you ready for the challenge?</p>
+        </div>
+        <button id="startButton" onclick="startGame()">Start Mission</button>
+    </div>
+    <div id="game" style="display: none;">
+        <div class="email">
+            <p><strong>From:</strong> Principal Ganesan &lt;principal_ganesan@totallynotascam.website.buzz&gt;</p>
+            <p><strong>Subject:</strong> 🚨 URGENT: You've Won a FREE iPad!!!! 🎉</p>
+            <p><strong>Body:</strong> Dear Lucky Student,<br><br>
+            CONGRATULATIONS!!!! 🎊🎊🎊 You've been randomly selected to receive a FREE iPad as part of our totally real school giveaway! To claim your amazing prize, follow these simple steps:<br><br>
+            1. Click this link NOW: <a href="http://not-fuhua-school.com/free-ipad">http://not-fuhua-school.com/free-ipad</a><br>
+            2. Enter your full name, class, home address, and parents' credit card details<br>
+            3. Pay a tiny $100 processing fee (it's practically free!)<br><br>
+            HURRY! This offer expires in 1 HOUR! Don't miss out on your FREE iPad! ⏰<br><br>
+            Best regards,<br>
+            Principal Ganesan<br>
+            Fuhua Primary School </p>
+        </div>
+
+        <div id="question1" class="question">
+          <p>1. What are the obvious signs that this email is a scam?</p>
+          <button onclick="checkAnswer(1, 'A')">A. The sender's email looks fishy 🐠</button>
+          <button onclick="checkAnswer(1, 'B')">B. Free iPad? Too good to be true! 🎁</button>
+          <button onclick="checkAnswer(1, 'C')">C. It's super urgent (suspicious!) ⏰</button>
+          <button onclick="checkAnswer(1, 'D')">D. All of the above 🎯</button>
+        </div>
+
+        <div id="question2" class="question" style="display: none;">
+          <p>2. As a cyber detective, how would you check if the link is dangerous?</p>
+          <button onclick="checkAnswer(2, 'A')">A. Use special tools to scan it safely 🔎</button>
+          <button onclick="checkAnswer(2, 'B')">B. Click and see what happens 🙈</button>
+        </div>
+
+        <div id="question3" class="question" style="display: none;">
+          <p>3. You've confirmed it's a scam! What's your next move, detective?</p>
+          <button onclick="checkAnswer(3, 'A')">A. Do nothing 😴</button>
+          <button onclick="checkAnswer(3, 'B')">B. Warn all students about it 📢</button>
+          <button onclick="checkAnswer(3, 'C')">C. Delete the email and block the sender 🚫</button>
+        </div>
+
+        <button id="nextButton" onclick="nextQuestion()" style="display: none;">Next Question</button>
+    </div>
+    <div id="feedback"></div>
+    <div id="result"></div>
+
+    <script>
+        let score = 0;
+        let currentQuestion = 1;
+
+        function startGame() {
+            document.getElementById('intro').style.display = 'none';
+            document.getElementById('game').style.display = 'block';
+        }
+
+        function checkAnswer(question, choice) {
+            let feedback = "";
+            switch(question) {
+                case 1:
+                    if (choice === 'D') {
+                        score++;
+                        feedback = "Correct! All of these are signs of a scam. The suspicious email address, unrealistic offer, and artificial urgency are common tactics used by scammers.";
+                    } else {
+                        feedback = "Not quite. While this is a sign of a scam, it's not the only one. The correct answer is 'All of the above'. Look for multiple red flags in suspicious emails.";
+                    }
+                    break;
+                case 2:
+                    if (choice === 'A') {
+                        score++;
+                        feedback = "Correct! As a SOC analyst, you should use specialized tools to safely analyze suspicious links. Tools like VirusTotal can scan URLs for malware without risking infection. You should never click on suspicious links directly, as this could potentially infect your system or compromise security.";
+                    } else {
+                        feedback = "Not quite. Clicking on a suspicious link could potentially infect your system or compromise security. It's safer to use specialized tools for analysis.";
+                    }
+                    break;
+                case 3:
+                    if (choice === 'C') {
+                        score++;
+                        feedback = "Correct! As a SOC analyst, you should delete the email and block the sender to prevent further scam attempts.";
+                    } else {
+                        feedback = "Not the best choice. As a SOC analyst, the most effective action is to delete the email and block the sender to prevent further scam attempts.";
+                    }
+                    break;
+            }
+
+            document.getElementById('feedback').innerHTML = feedback;
+            document.getElementById('nextButton').style.display = 'block';
+            disableButtons();
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < 3) {
+                currentQuestion++;
+                document.getElementById(`question${currentQuestion-1}`).style.display = 'none';
+                document.getElementById(`question${currentQuestion}`).style.display = 'block';
+                document.getElementById('feedback').innerHTML = '';
+                document.getElementById('nextButton').style.display = 'none';
+                enableButtons();
+            } else {
+                endGame();
+            }
+        }
+
+        function disableButtons() {
+            let buttons = document.querySelectorAll(`#question${currentQuestion} button`);
+            buttons.forEach(button => button.disabled = true);
+        }
+
+        function enableButtons() {
+            let buttons = document.querySelectorAll(`#question${currentQuestion} button`);
+            buttons.forEach(button => button.disabled = false);
+        }
+
+        function endGame() {
+            document.getElementById('game').style.display = 'none';
+            document.getElementById('feedback').style.display = 'none';
+            document.getElementById('nextButton').style.display = 'none';
+            let resultMessage = "";
+            if (score === 3) {
+                resultMessage = "Excellent job! You've got the makings of a great SOC analyst!";
+            } else if (score === 2) {
+                resultMessage = "Good work! You've spotted most of the scam indicators.";
+            } else if (score === 1) {
+                resultMessage = "Not bad, but there's room for improvement in your scam detection skills.";
+            } else {
+                resultMessage = "Oops! You might want to review the common indicators of email scams.";
+            }
+            document.getElementById('result').innerHTML = `Mission Complete! Your score: ${score}/3. ${resultMessage}`;
+        }
+    </script>
+</body>
+</html>
